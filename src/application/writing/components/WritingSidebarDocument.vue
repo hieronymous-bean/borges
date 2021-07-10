@@ -4,7 +4,7 @@
       <svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">    <path d="M5.707,10.707l5.586,5.586c0.391,0.391,1.024,0.391,1.414,0l5.586-5.586C18.923,10.077,18.477,9,17.586,9H6.414 C5.523,9,5.077,10.077,5.707,10.707z"></path></svg>
     </div>
     <div @click="this.menuItemActive = !this.menuItemActive" class="flex items-center h-10 overflow-hidden">
-      <div :style="true ? 'background-color:#000000':''" class="w-8 mr-1 ml-4 p-2 bg-white hover:bg-lightgrey"></div>
+      <div :class="'bg-' + DocumentData.color" class="w-8 mr-1 ml-4 p-2 bg-white hover:bg-lightgrey"></div>
       <span class="truncate mr-auto pr-1">{{ DocumentData.name }}</span>
     </div>
     <div class="flex-none">

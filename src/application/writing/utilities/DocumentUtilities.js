@@ -18,6 +18,7 @@ export const addNewDocument = async (uid, project) => {
     uid: uid,
     body: '',
     type: 'Page',
+    color: 'primary',
     project: project.id
   }).then(function(docRef) {
     return updateDocumentWithId(docRef.id);
