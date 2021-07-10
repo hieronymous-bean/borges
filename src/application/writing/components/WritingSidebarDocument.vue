@@ -23,7 +23,7 @@
 import WritingSidebarDocumentAddDocument from './WritingSidebarDocumentAddDocument.vue';
 import WritingSidebarDocumentOptions from './WritingSidebarDocumentOptions.vue';
 export default {
-  name: 'WritingSidebarMenuItem',
+  name: "WritingSidebarMenuItem",
   data: () => ({
     menuItemActive: false
   }),
@@ -38,5 +38,5 @@ export default {
   props: [
     "DocumentData"
   ]
-}
+};
 </script>

@@ -12,7 +12,7 @@ import WritingSidebarDocument from './WritingSidebarDocument.vue';
 import { addNewDocument } from '../utilities/DocumentUtilities.js';
 
 export default {
-  name: 'WritingSidebar',
+  name: "WritingSidebar",
   data: () => ({
 
   }),

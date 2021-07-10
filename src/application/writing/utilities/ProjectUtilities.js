@@ -8,4 +8,4 @@ export const getProjects = async uid => {
     id: doc.id
   }));
   return projects;
-}
+};

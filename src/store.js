@@ -102,6 +102,9 @@ export const store = new Vuex.Store({
         documentSelected: (state, document) => {
           state.documentSelected = document
         },
+        documentUpdateName: (state, documentName) => {
+          state.documentSelected.name = documentName
+        },
         projectRequest: (state) => {
           state.projectstatus = 'loading'
         },
@@ -109,8 +112,8 @@ export const store = new Vuex.Store({
           state.projects = payload.projects,
           state.projectstatus = 'success'
         },
-        projectSelected: (state, payload) => {
-          state.projectSelected = payload.project
+        projectSelected: (state, project) => {
+          state.projectSelected = project
         }
       },
       getters: {
