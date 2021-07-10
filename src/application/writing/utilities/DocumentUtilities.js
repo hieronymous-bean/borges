@@ -1,8 +1,8 @@
 import firebase from 'firebase/app';
 
 // get all documents //
-export const getDocuments = async uid => {
-  const documentsQuery = await firebase.firestore().collection('documents').where('uid', '==', uid).get();
+export const getDocuments = async (uid, project) => {
+  const documentsQuery = await firebase.firestore().collection('documents').where('uid', '==', uid).where('project', '==', project.id).get();
   const documents = documentsQuery.docs.map(doc => ({
     ...doc.data(),
     id: doc.id
@@ -11,12 +11,14 @@ export const getDocuments = async uid => {
 }
 
 //add new document //
-export const addNewDocument = async uid => {
+export const addNewDocument = async (uid, project) => {
+  console.log(project)
   const res = await firebase.firestore().collection('documents').add({
     name: 'New Document',
     uid: uid,
     body: '',
-    type: 'Page'
+    type: 'Page',
+    project: project.id
   }).then(function(docRef) {
     return updateDocumentWithId(docRef.id);
   });

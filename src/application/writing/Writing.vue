@@ -22,12 +22,15 @@ export default {
       return this.$store.getters['writing/getSelectedDocument'];
     },
     currentProject() {
-      return this.$store.getters['writing/getSelectedProject'];
+      return this.$store.getters['application/getSelectedProject'];
     }
   },
   methods: {
   },
   beforeMount() {
+    this.$store.dispatch('writing/getDocuments');
+  },
+  updated() {
     this.$store.dispatch('writing/getDocuments');
   }
 }

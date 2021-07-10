@@ -1,6 +1,6 @@
 <template>
-  <div class="flex items-center flex-shrink-0 h-16 px-8 border-b border-gray-300">
-    <input type="text" :value="documentName" @input="updateDocumentName" class="text-lg text-dark font-bold outline-none">
+  <div class="flex w-full items-center flex-shrink-0 h-16 px-8 border-b border-gray-300">
+    <input type="text" :value="documentName" @input="updateDocumentName" class="w-full text-lg text-dark font-bold outline-none">
   </div>
   <div class="flex text-gray-700">
     <div class="flex flex-col flex-grow">

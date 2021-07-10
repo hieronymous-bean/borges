@@ -4,7 +4,7 @@ import createPersistedState from "vuex-persistedstate";
 import firebase from "firebase/app";
 
 import { getDocuments } from './application/writing/utilities/DocumentUtilities.js';
-import { getProjects } from './application/writing/utilities/ProjectUtilities.js';
+import { getProjects } from './application/general/utilities/ProjectUtilities.js';
 
 // init store //
 export const store = new Vuex.Store({
@@ -68,16 +68,37 @@ export const store = new Vuex.Store({
       plugins: [createPersistedState()],
       namespaced: true,
       state: () => ({
-        
+        projects: localStorage.getItem('projects') || '',
+        projectstatus: '',
+        projectSelected: ''
       }),
       mutations: {
-
+        projectRequest: (state) => {
+          state.projectstatus = 'loading'
+        },
+        projectSuccess: (state, payload) => {
+          state.projects = payload.projects,
+          state.projectstatus = 'success'
+        },
+        projectSelected: (state, project) => {
+          state.projectSelected = project
+        }
       },
       getters: {
-
+        getProjects: state => state.projects,
+        getProjectSelected: state => state.projectSelected
       },
       actions: {
-        
+        getProjects: ({ commit, state }) => {
+          commit('projectRequest', { });
+          const uid = store.state.authentication.user.uid;
+          return getProjects(uid).then((response) => {
+            return response;
+          }).then(loadedProjects => {
+            commit('projectSuccess', { projects: loadedProjects });
+            return loadedProjects;
+          });
+        },
       }
     },
     writing: {
@@ -86,10 +107,7 @@ export const store = new Vuex.Store({
       state: () => ({
         documents: localStorage.getItem('documents') || '',
         documentstatus: '',
-        documentSelected: '',
-        projects: localStorage.getItem('projects') || '',
-        projectstatus: '',
-        projectSelected: ''
+        documentSelected: ''
       }),
       mutations: {
         documentRequest: (state) => {
@@ -104,20 +122,9 @@ export const store = new Vuex.Store({
         },
         documentUpdateName: (state, documentName) => {
           state.documentSelected.name = documentName
-        },
-        projectRequest: (state) => {
-          state.projectstatus = 'loading'
-        },
-        projectSuccess: (state, payload) => {
-          state.projects = payload.projects,
-          state.projectstatus = 'success'
-        },
-        projectSelected: (state, project) => {
-          state.projectSelected = project
         }
       },
       getters: {
-        getProjects: state => state.projects,
         getDocuments: state => state.documents,
         getSelectedDocument: state => state.documentSelected
       },
@@ -125,23 +132,14 @@ export const store = new Vuex.Store({
         getDocuments: ({ commit, state }) => {
           commit('documentRequest', { });
           const uid = store.state.authentication.user.uid;
-          return getDocuments(uid).then((response) => {
+          const project = store.state.application.projectSelected;
+          return getDocuments(uid, project).then((response) => {
             return response;
           }).then(loadedDocuments => {
             commit('documentSuccess', { documents: loadedDocuments });
             return loadedDocuments;
           });
-        },
-        getProjects: ({ commit, state }) => {
-          commit('projectRequest', { });
-          const uid = store.state.authentication.user.uid;
-          return getProjects(uid).then((response) => {
-            return response;
-          }).then(loadedProjects => {
-            commit('projectSuccess', { projects: loadedProjects });
-            return loadedProjects;
-          });
-        },
+        }
       }
     }
   }

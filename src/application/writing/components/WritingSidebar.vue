@@ -22,7 +22,8 @@ export default {
   methods: {
     createDocument() {
       const user = this.$store.getters['authentication/getUser'];
-      addNewDocument(user.uid).then(() => {
+      const project = this.$store.getters['application/getProjectSelected'];
+      addNewDocument(user.uid, project).then(() => {
         this.$store.dispatch('writing/getDocuments');
       });
     }

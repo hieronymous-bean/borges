@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     projects() {
-      const projectData = this.$store.getters['writing/getProjects'];
+      const projectData = this.$store.getters['application/getProjects'];
       return projectData;
     }
   }
