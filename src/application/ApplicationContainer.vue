@@ -26,9 +26,7 @@ export default {
   },
   beforeMount() {
     this.$store.dispatch('application/getProjects');
-  },
-  updated() {
-    this.$store.dispatch('application/getProjects');
+    this.$store.dispatch('writing/getDocuments');
   }
 }
 </script>

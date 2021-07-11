@@ -120,6 +120,9 @@ export const store = new Vuex.Store({
         documentSelected: (state, document) => {
           state.documentSelected = document
         },
+        documentCreate: (state, newDocument) => {
+          state.documents.push(newDocument);
+        },
         documentUpdateName: (state, documentName) => {
           state.documentSelected.name = documentName
         }

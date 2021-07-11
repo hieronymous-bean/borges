@@ -31,9 +31,6 @@ export default {
     updateDocumentName (e) {
       this.$store.commit('writing/documentUpdateName', e.target.value)
     }
-  },
-  updated() {
-
   }
 }
 </script>

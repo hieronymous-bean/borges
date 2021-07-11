@@ -18,20 +18,16 @@ export default {
     WritingSidebar
   },
   computed: {
-    currentDocument() {
-      return this.$store.getters['writing/getSelectedDocument'];
-    },
-    currentProject() {
-      return this.$store.getters['application/getSelectedProject'];
-    }
+
   },
   methods: {
+
   },
   beforeMount() {
-    this.$store.dispatch('writing/getDocuments');
+    this.$store.getters["writing/getDocuments"];
   },
   updated() {
-    this.$store.dispatch('writing/getDocuments');
+    this.$store.getters["writing/getDocuments"];
   }
 }
 </script>
