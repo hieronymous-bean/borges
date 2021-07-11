@@ -1,6 +1,6 @@
 <template>
-  <router-link @click="this.$store.commit('application/projectSelected', ProjectData)" :to=" '/writing/' + ProjectData.id" :class="'bg-' + ProjectData.color" class="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded border border-lightgrey text-dark hover:text-primary cursor-pointer">
-    <img :src="ProjectData.icon"/>
+  <router-link @click="this.$store.commit('application/projectSelected', ProjectData)" :to=" '/writing/' + ProjectData.id" :class="{ 'bg-greyone': projectIsSelected }" class="flex items-center justify-center flex-shrink-0 w-10 h-10 mt-4 rounded hover:bg-greytwo text-dark hover:text-one cursor-pointer">
+    <div v-html="ProjectData.icon"></div>
   </router-link>
 </template>
 
@@ -17,7 +17,10 @@ export default {
 
   },
   computed: {
-
+    projectIsSelected() {
+      const projectSelected = this.$store.getters['application/getProjectSelected'];
+      return this.ProjectData.id == projectSelected.id;
+    }
   },
   props: [
     "ProjectData"

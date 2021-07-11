@@ -82,6 +82,9 @@ export const store = new Vuex.Store({
         },
         projectSelected: (state, project) => {
           state.projectSelected = project
+        },
+        projectCreate: (state, newProject) => {
+          state.projects.push(newProject);
         }
       },
       getters: {
@@ -119,6 +122,9 @@ export const store = new Vuex.Store({
         },
         documentSelected: (state, document) => {
           state.documentSelected = document
+        },
+        documentCreate: (state, newDocument) => {
+          state.documents.push(newDocument);
         },
         documentUpdateName: (state, documentName) => {
           state.documentSelected.name = documentName

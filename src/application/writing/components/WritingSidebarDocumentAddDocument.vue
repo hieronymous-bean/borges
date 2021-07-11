@@ -1,6 +1,6 @@
 <template>
-    <div class="inline-block w-5 bg-white hover:bg-lightgrey rounded">
-      <svg class="w-4 h-4 px-0.5 border border-primary rounded text-primary fill-current" viewBox="0 0 24 24">
+    <div class="inline-block w-5">
+      <svg class="w-4 h-4 bg-white px-0.5 border border-greythree text-primary rounded-sm fill-current hover:shadow-sm" viewBox="0 0 24 24">
         <path d="M20,11h-7V4c0-0.552-0.448-1-1-1s-1,0.448-1,1v7H4c-0.552,0-1,0.448-1,1s0.448,1,1,1h7v7c0,0.552,0.448,1,1,1s1-0.448,1-1 v-7h7c0.552,0,1-0.448,1-1S20.552,11,20,11z"></path></svg>
     </div>
 

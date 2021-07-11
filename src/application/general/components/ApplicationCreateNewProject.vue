@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col absolute top-1/4 left-0 right-0 w-11/12 sm:w-5/6 lg:w-1/2 max-w-2xl max-h-2xl mx-auto rounded-sm">
-    <div class="flex flex-row justify-between px-6 py-3 bg-dark border-b border-gray-300 rounded-tl-lg rounded-tr-lg">
+    <div class="flex flex-row justify-between px-6 py-3 bg-darktwo border-b border-gray-300 rounded-tl-lg rounded-tr-lg">
       <div class="flex">
       <svg class="w-6 mr-5 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 5 2 C 3.3550302 2 2 3.3550302 2 5 L 2 17 C 2 18.64497 3.3550302 20 5 20 L 22 20 L 22 4 L 8 4 L 8 2 L 5 2 z M 5 4 L 6 4 L 6 14 L 5 14 C 4.6116523 14 4.3420139 14.278986 4 14.416016 L 4 5 C 4 4.4349698 4.4349698 4 5 4 z M 8 6 L 20 6 L 20 18 L 5 18 C 4.4349698 18 4 17.56503 4 17 C 4 16.43497 4.4349698 16 5 16 L 8 16 L 8 6 z M 14 9 L 15.292969 10.292969 L 14 11.585938 L 12 9.5859375 L 9.2929688 12.292969 L 10.707031 13.707031 L 12 12.414062 L 14 14.414062 L 16.707031 11.707031 L 18 13 L 18 9 L 14 9 z"></path></svg>
       <p class="font-semibold text-lg text-white">Create New Project</p>
@@ -14,22 +14,55 @@
         ></path>
       </svg>
     </div>
-    <div class="flex flex-col px-6 py-5 bg-gray-100 border-r border-l">
-      <div class="flex flex-row items-center justify-between p-5 bg-white border rounded-sm shadow-sm">
-        <div class="flex flex-row items-center">
-          <svg class="w-12 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">    <path d="M 10.033203 1 A 1.0001 1.0001 0 0 0 9.0664062 2.359375 L 13.199219 13.105469 C 13.72813 14.479899 14 15.940871 14 17.414062 L 14 22.611328 L 9.6679688 21.167969 L 6.8574219 16.486328 A 1.0001 1.0001 0 0 0 5.0292969 17.242188 L 7.0292969 25.242188 A 1.0001 1.0001 0 0 0 7.390625 25.792969 L 13.449219 30.453125 L 13.121094 33.728516 A 1.0001 1.0001 0 0 0 13.121094 33.730469 C 13.051524 34.434332 12.903527 35.130307 12.679688 35.802734 C 11.694814 38.755193 9.7536466 41.297047 7.1640625 43.023438 L 5.4453125 44.167969 A 1.0001 1.0001 0 0 0 6 46 L 15 46 A 1.0001 1.0001 0 0 0 15.316406 45.949219 L 20.923828 44.080078 L 24.552734 45.894531 A 1.0001 1.0001 0 0 0 25.447266 45.894531 L 28.927734 44.154297 L 31.445312 45.832031 A 1.0001 1.0001 0 0 0 31.757812 45.970703 L 43.757812 48.970703 A 1.0001 1.0001 0 0 0 44.759766 47.349609 L 40.925781 42.878906 C 39.578882 41.307053 38.550539 39.488497 37.896484 37.525391 L 37.619141 36.693359 C 37.196744 35.428062 36.915848 34.120366 36.783203 32.792969 L 36.542969 30.386719 L 42.677734 24.736328 A 1.0001 1.0001 0 0 0 42.970703 24.242188 L 44.970703 16.242188 A 1.0001 1.0001 0 0 0 43.142578 15.486328 L 40.292969 20.236328 L 36 22.382812 L 36 16.740234 C 36 15.673046 36.141231 14.61332 36.421875 13.583984 L 38.964844 4.2636719 A 1.0001 1.0001 0 0 0 37.191406 3.4121094 L 31 11.925781 L 31 8.0820312 L 31.986328 2.1640625 A 1.0001 1.0001 0 0 0 30.232422 1.359375 L 25.232422 7.359375 A 1.0001 1.0001 0 0 0 25.019531 7.8046875 L 24.552734 10.134766 L 20.875 3.5136719 A 1.0001 1.0001 0 0 0 19 4 L 19 10.414062 L 10.740234 1.328125 A 1.0001 1.0001 0 0 0 10.033203 1 z M 29.408203 5.4726562 L 29.013672 7.8359375 A 1.0001 1.0001 0 0 0 29 8 L 29 15 A 1.0001 1.0001 0 0 0 30.808594 15.587891 L 35.599609 9 L 34.494141 13.056641 C 34.166785 14.257305 34 15.495422 34 16.740234 L 34 24 A 1.0001 1.0001 0 0 0 35.447266 24.894531 L 41.447266 21.894531 A 1.0001 1.0001 0 0 0 41.501953 21.863281 L 41.101562 23.466797 L 34.822266 29.253906 A 1.0001 1.0001 0 0 0 34.503906 30.087891 L 34.794922 32.992188 C 34.942277 34.466789 35.2511 35.919469 35.720703 37.326172 L 35.998047 38.158203 C 36.73402 40.366447 37.893491 42.411994 39.408203 44.179688 L 41.199219 46.269531 L 32.410156 44.072266 L 29.554688 42.167969 A 1.0001 1.0001 0 0 0 28.552734 42.105469 L 25 43.882812 L 21.447266 42.105469 A 1.0001 1.0001 0 0 0 20.683594 42.050781 L 14.837891 44 L 9.0058594 44 C 11.463309 42.126076 13.37745 39.647955 14.419922 36.728516 A 1.0001 1.0001 0 0 0 14.576172 36.433594 C 14.846331 35.622022 15.026901 34.781871 15.111328 33.927734 L 15.494141 30.099609 A 1.0001 1.0001 0 0 0 15.109375 29.207031 L 8.8847656 24.419922 L 8.4960938 22.865234 A 1.0001 1.0001 0 0 0 8.6835938 22.949219 L 14.683594 24.949219 A 1.0001 1.0001 0 0 0 16 24 L 16 17.414062 C 16 15.695256 15.683495 13.992242 15.066406 12.388672 L 12.847656 6.6191406 L 19.259766 13.671875 A 1.0001 1.0001 0 0 0 21 13 L 21 7.8613281 L 24.125 13.486328 A 1.0001 1.0001 0 0 0 25.980469 13.195312 L 26.931641 8.4453125 L 29.408203 5.4726562 z M 18 20 C 18 20 18.25 23 21 23 C 23 23 23 21 23 21 L 18 20 z M 32 20 L 27 21 C 27 21 27 23 29 23 C 31.75 23 32 20 32 20 z M 19.982422 26 A 1.0001 1.0001 0 0 0 19.005859 26.900391 L 18.005859 36.900391 A 1.0001 1.0001 0 0 0 19.599609 37.800781 L 22.753906 35.433594 L 24.167969 37.554688 A 1.0001 1.0001 0 0 0 25.832031 37.554688 L 27.246094 35.433594 L 30.400391 37.800781 A 1.0001 1.0001 0 0 0 31.994141 36.900391 L 30.994141 26.900391 A 1.0001 1.0001 0 0 0 29.167969 26.445312 L 27.84375 28.429688 L 25.707031 26.292969 A 1.0001 1.0001 0 0 0 24.292969 26.292969 L 22.15625 28.429688 L 20.832031 26.445312 A 1.0001 1.0001 0 0 0 19.982422 26 z M 25 28.414062 L 27.292969 30.707031 A 1.0001 1.0001 0 0 0 28.832031 30.554688 L 29.283203 29.876953 L 29.779297 34.833984 L 27.599609 33.199219 A 1.0001 1.0001 0 0 0 26.167969 33.445312 L 25 35.197266 L 23.832031 33.445312 A 1.0001 1.0001 0 0 0 22.400391 33.199219 L 20.220703 34.833984 L 20.716797 29.876953 L 21.167969 30.554688 A 1.0001 1.0001 0 0 0 22.707031 30.707031 L 25 28.414062 z"></path></svg>
-          <div class="flex flex-col">
-          <input v-model="projectName" placeholder="Project Name" class="outline-none"/>
-            <select type="text" name="projectType" :v-model="projectType" class="w-full outline-none py-1 px-0 font-light bg-white border-none text-sm appearance-none cursor-pointer" id="">
-              <option value="0">Fiction</option>
-              <option value="0">Non-Fiction</option>
-            </select>
-          </div>
+    <div class="flex flex-col bg-greytwo">
+      <div class="flex flex-row items-center justify-between bg-white border-r border-l rounded-sm">
+        <div class="flex flex-row items-center w-full">
+          <table class="min-w-max w-full table-auto">
+            <thead>
+              <tr class="bg-greyone text-darkone uppercase text-xs">
+                <th class="py-3 px-6 text-left">Title</th>
+                <th class="py-3 px-6 text-left">Type</th>
+                <th class="py-3 px-6 text-left">Access</th>
+                <th class="py-3 px-6 text-left">Color</th>
+                <th class="py-3 px-6 text-center">Icon</th>
+              </tr>
+            </thead>
+            <tbody class="text-greyfour text-sm font-light">
+              <tr class="border-b border-graytwo">
+                <td class="py-3 px-6 text-left whitespace-nowrap">
+                  <div class="flex items-center">
+                    <input v-model="projectName" placeholder="Project Name" class="outline-none"/>
+                  </div>
+                </td>
+              <td class="py-3 px-6 text-left">
+                <span class="text-darkone text-xs">
+                  <select type="text" name="projectType" v-model="projectType" class="w-full outline-none py-1 px-0 border-none appearance-none cursor-pointer" id="">
+                    <option class="text-darkone" value="0">Fiction</option>
+                    <option value="0">Non-Fiction</option>
+                  </select>
+                </span>
+              </td>
+              <td class="py-3 px-6 text-left">
+                <span class="bg-white text-xs">Private</span>
+              </td>
+              <td class="py-3 px-6 text-left">
+                <span class="bg-one text-white text-xs px-2 py-1 rounded-full">Primary</span>
+              </td>
+              <td class="py-3 px-6 text-left whitespace-nowrap">
+                <div class="flex items-center">
+                  <div class="mx-auto" v-html="iconSource">
+                    
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         </div>
       </div>
     </div>
     <div class="flex flex-row items-center justify-between px-6 py-3 bg-gray-50 border-gray-200 border-b border-r border-l">
-      <button @click="createProject()" class="px-4 py-2 text-white hover:underline text-sm font-normal bg-primary rounded-sm">
+      <button @click="createProject()" class="px-4 py-2 text-white hover:underline text-sm font-normal bg-one rounded-sm">
         Create Project 
       </button>
     </div>
@@ -42,22 +75,24 @@ import { addNewProject } from "../utilities/ProjectUtilities.js";
 export default {
   name: 'ApplicationCreateNewProject',
   data: () => ({
-    
+    iconSource: '<svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M 9.2773438 1.0527344 L 7.3828125 2 L 5 2 L 5 3 L 7 3 L 7 4 L 6 4 A 0.50005 0.50005 0 0 0 5.7226562 4.0839844 L 4.7675781 4.7207031 L 3.9746094 2.3417969 A 0.50005 0.50005 0 0 0 3.4746094 2 A 0.50005 0.50005 0 0 0 3.1464844 2.1464844 C 3.1464844 2.1464844 2.6124305 2.679987 2.0839844 3.4726562 C 1.5555382 4.2653256 1 5.3333333 1 6.5 C 1 7.6666667 1.5555382 8.7346744 2.0839844 9.5273438 C 2.6124305 10.320013 3.1464844 10.853516 3.1464844 10.853516 L 3.8535156 10.146484 C 3.8535156 10.146484 3.3875695 9.6799871 2.9160156 8.9726562 C 2.4444618 8.2653255 2 7.3333333 2 6.5 C 2 5.6666667 2.4444618 4.7346745 2.9160156 4.0273438 C 3.1167015 3.7263149 3.1512768 3.7237308 3.3144531 3.5273438 L 4.0253906 5.6582031 A 0.50005 0.50005 0 0 0 4.7773438 5.9160156 L 6.1523438 5 L 7 5 L 7 6 L 6 6 L 6 7 L 7 7 L 7 8 L 6 8 L 6 9 L 7 9 L 7 10 L 6 10 L 6 10.292969 L 5.0898438 11.203125 L 4.0527344 13.277344 L 4.9472656 13.722656 L 5.9101562 11.796875 L 6.3066406 11.400391 C 6.5805684 11.762387 7.0113806 12 7.5 12 C 7.9886194 12 8.4194316 11.762387 8.6933594 11.400391 L 9.0898438 11.796875 L 10.052734 13.722656 L 10.947266 13.277344 L 9.9101562 11.203125 L 9 10.292969 L 9 10 L 8 10 L 8 9 L 9 9 L 9 8 L 8 8 L 8 7 L 9 7 L 9 6 L 8 6 L 8 5 L 8.8476562 5 L 10.222656 5.9160156 A 0.50005 0.50005 0 0 0 10.974609 5.6582031 L 11.685547 3.5273438 C 11.848723 3.7237308 11.883299 3.726315 12.083984 4.0273438 C 12.555538 4.7346744 13 5.6666667 13 6.5 C 13 7.3333333 12.555538 8.2653256 12.083984 8.9726562 C 11.612431 9.679987 11.146484 10.146484 11.146484 10.146484 L 11.853516 10.853516 C 11.853516 10.853516 12.387569 10.320013 12.916016 9.5273438 C 13.444462 8.7346745 14 7.6666667 14 6.5 C 14 5.3333333 13.444462 4.2653255 12.916016 3.4726562 C 12.387569 2.6799871 11.853516 2.1464844 11.853516 2.1464844 A 0.50005 0.50005 0 0 0 11.492188 2 A 0.50005 0.50005 0 0 0 11.025391 2.3417969 L 10.232422 4.7207031 L 9.2773438 4.0839844 A 0.50005 0.50005 0 0 0 9 4 L 8 4 L 8 2.8085938 L 9.7226562 1.9472656 L 9.2773438 1.0527344 z"></path></svg>'
   }),
   components: {
 
   },
   methods: {
     createProject() {
-      const user = this.$store.getters['authentication/getUser'];
-      const projectDetails = {
-        name: 'projectName',
+      if (!this.projectName) return;
+
+      const user = this.$store.getters["authentication/getUser"];
+      const newProject = {
+        name: this.projectName,
+        type: this.projectType,
         color: "purple",
-        icon: "www"
+        icon: this.iconSource
       };
-      addNewProject(user.uid, projectDetails).then(() => {
-        this.$store.dispatch('application/getProjects');
-      });
+      this.$store.commit("application/projectCreate", newProject);
+
     },
     closeCreateNewProjectWindow() {
       this.$emit('CloseCreateProjectWindow');
