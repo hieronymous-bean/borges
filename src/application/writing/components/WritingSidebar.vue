@@ -1,12 +1,9 @@
 <template>
-  <div class="flex flex-col w-64 bg-lightblue border-r border-mediumgrey">
-    <div class="w-full flex-row h-16 bg-primary items-center align-middle">
-      <h1 class="p-2 h-16 text-lg font-bold text-white text-center align-middle">{{ project.name }}</h1>
-    </div>
+  <div class="flex flex-col w-64 bg-lightblue border-r border-greyone py-2">
     <div class="flex flex-col flex-grow">
       <writing-sidebar-document v-for="(document, index) in this.documents" :key="index" :DocumentData="document"/>
     </div>
-    <div @click="createDefaultDocument" class="bg-lightblue border-t p-2 text-sm text-dark text-center hover:underline cursor-pointer">+ Add Page</div>
+    <div @click="createDefaultDocument" class="bg-greyone border-t border-greyone p-2 text-sm text-dark text-center hover:underline cursor-pointer">+ Add Page</div>
   </div>
 </template>
 
