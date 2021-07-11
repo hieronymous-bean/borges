@@ -82,6 +82,9 @@ export const store = new Vuex.Store({
         },
         projectSelected: (state, project) => {
           state.projectSelected = project
+        },
+        projectCreate: (state, newProject) => {
+          state.projects.push(newProject);
         }
       },
       getters: {

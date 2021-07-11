@@ -82,17 +82,17 @@ export default {
   },
   methods: {
     createProject() {
-      const user = this.$store.getters['authentication/getUser'];
       if (!this.projectName) return;
-      const projectDetails = {
+
+      const user = this.$store.getters["authentication/getUser"];
+      const newProject = {
         name: this.projectName,
         type: this.projectType,
         color: "purple",
         icon: this.iconSource
       };
-      addNewProject(user.uid, projectDetails).then(() => {
-        this.$store.dispatch('application/getProjects');
-      });
+      this.$store.commit("application/projectCreate", newProject);
+
     },
     closeCreateNewProjectWindow() {
       this.$emit('CloseCreateProjectWindow');
