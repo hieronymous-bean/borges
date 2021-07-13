@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col">
     <div class="flex items-center justify-center ">
-      <div class="w-full mx-auto rounded-sm bg-greyone p-3 text-black">
+      <div class="w-full mx-auto rounded-sm text-black">
         <div class="bg-white border border-greytwo overflow-hidden rounded-sm">
-          <div class="w-full flex border-b border-gray-200 text-xl text-greytwo">
-            <button class="outline-none focus:outline-none border-r border-gray-200 w-10 h-10 p-2 hover:text-indigo-500 active:bg-gray-50" @click="format('bold')">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M 13.5 5 A 3.50035 3.50035 0 0 0 10 9.0625 L 10 38.927734 A 3.50035 3.50035 0 0 0 13.5 43 L 28.5 43 C 34.809806 43 40 37.809806 40 31.5 C 40 27.576304 37.869136 24.256752 34.833984 22.177734 C 36.094314 20.388971 37 18.333726 37 16 C 37 9.9663213 32.033679 5 26 5 L 13.5 5 z M 17 12 L 26 12 C 28.250321 12 30 13.749679 30 16 C 30 18.250321 28.250321 20 26 20 L 17.5 20 A 3.50035 3.50035 0 0 0 17 20.033203 L 17 12 z M 17 26.966797 A 3.50035 3.50035 0 0 0 17.255859 26.994141 A 3.50035 3.50035 0 0 0 17.5 27 L 26 27 L 28.5 27 C 31.026194 27 33 28.973806 33 31.5 C 33 34.026194 31.026194 36 28.5 36 L 17 36 L 17 26.966797 z"></path></svg>
+          <!-- <div class="w-full flex border-b border-gray-200 text-xl text-greytwo">
+            <button class="outline-none focus:outline-none border-r border-gray-200 w-5 hover:text-indigo-500 active:bg-gray-50" @click="format('bold')">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M 2 1 L 2 14 L 10 14 C 12.203125 14 14 12.203125 14 10 C 14 8.589844 13.183594 7.449219 12.078125 6.734375 C 12.613281 6.125 13 5.378906 13 4.5 C 13 2.574219 11.425781 1 9.5 1 Z M 3 2 L 9.5 2 C 10.886719 2 12 3.113281 12 4.5 C 12 5.273438 11.644531 5.953125 11.085938 6.414063 L 10.464844 6.929688 L 11.203125 7.257813 C 12.261719 7.71875 13 8.769531 13 10 C 13 11.664063 11.664063 13 10 13 L 3 13 Z M 5 4 L 5 6 L 8 6 C 8.351563 6 8.613281 5.78125 8.789063 5.5 L 9 5.5 L 9 5 C 9 4.453125 8.546875 4 8 4 Z M 5 9 L 5 11 L 9 11 C 9.351563 11 9.613281 10.78125 9.789063 10.5 L 10 10.5 L 10 10 C 10 9.453125 9.546875 9 9 9 Z"></path></svg>
             </button>
             <button class="outline-none focus:outline-none border-r border-gray-200 w-10 h-10 p-2 hover:text-indigo-500 active:bg-gray-50" @click="format('italic')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M 29.439453 6.9824219 A 1.50015 1.50015 0 0 0 29.269531 7 L 18.5 7 A 1.50015 1.50015 0 1 0 18.5 10 L 27.310547 10 L 16.472656 38 L 8.5 38 A 1.50015 1.50015 0 1 0 8.5 41 L 17.251953 41 A 1.50015 1.50015 0 0 0 17.730469 41 L 29.5 41 A 1.50015 1.50015 0 1 0 29.5 38 L 19.689453 38 L 30.527344 10 L 37.5 10 A 1.50015 1.50015 0 1 0 37.5 7 L 29.748047 7 A 1.50015 1.50015 0 0 0 29.439453 6.9824219 z"></path></svg>
@@ -40,8 +40,7 @@
             <button class="outline-none focus:outline-none border-r border-gray-200 w-10 h-10 p-2 hover:text-indigo-500 active:bg-gray-50" @click="format('justifyRight')">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M 13.5 10 A 1.50015 1.50015 0 1 0 13.5 13 L 42.5 13 A 1.50015 1.50015 0 1 0 42.5 10 L 13.5 10 z M 5.5 23 A 1.50015 1.50015 0 1 0 5.5 26 L 42.5 26 A 1.50015 1.50015 0 1 0 42.5 23 L 5.5 23 z M 20.5 36 A 1.50015 1.50015 0 1 0 20.5 39 L 41.5 39 A 1.50015 1.50015 0 1 0 41.5 36 L 20.5 36 z"></path></svg>
             </button>
-            </div>
-            {{EditorContent.body}}
+            </div> -->
             <div class="w-full">
                 <editor-content :editor="editor" class="w-full overflow-y-auto"/>
             </div>
@@ -81,10 +80,8 @@ export default {
   beforeUnmount() {
     this.editor.destroy()
   },
-  updated() {
-    this.EditorContent.body = this.EditorContent.body
-  }
 }
+
 </script>
 
 <style>

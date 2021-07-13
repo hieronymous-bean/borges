@@ -1,7 +1,7 @@
 {
   "name": "borges",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "From storyboarding, brainstorming, document organization, automated manuscript generation, Borges is an application intended to streamline the authoring process for writers and creatives.",
   "main": "index.js",
   "scripts": {
     "dev": "vue-cli-service serve",

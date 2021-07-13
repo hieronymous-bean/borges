@@ -1,7 +1,6 @@
 <template>
     <div class="inline-block w-5">
-      <svg class="w-4 h-4 bg-white px-0.5 border border-greythree text-primary rounded-sm fill-current hover:shadow-sm" viewBox="0 0 24 24">
-        <path d="M20,11h-7V4c0-0.552-0.448-1-1-1s-1,0.448-1,1v7H4c-0.552,0-1,0.448-1,1s0.448,1,1,1h7v7c0,0.552,0.448,1,1,1s1-0.448,1-1 v-7h7c0.552,0,1-0.448,1-1S20.552,11,20,11z"></path></svg>
+        <svg class="w-4 h-4 text-primary rounded-sm fill-current hover:shadow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M 2.5 1 C 1.675781 1 1 1.675781 1 2.5 L 1 12.5 C 1 13.324219 1.675781 14 2.5 14 L 12.5 14 C 13.324219 14 14 13.324219 14 12.5 L 14 2.5 C 14 1.675781 13.324219 1 12.5 1 Z M 2.5 2 L 12.5 2 C 12.78125 2 13 2.21875 13 2.5 L 13 12.5 C 13 12.78125 12.78125 13 12.5 13 L 2.5 13 C 2.21875 13 2 12.78125 2 12.5 L 2 2.5 C 2 2.21875 2.21875 2 2.5 2 Z M 7 4 L 7 7 L 4 7 L 4 8 L 7 8 L 7 11 L 8 11 L 8 8 L 11 8 L 11 7 L 8 7 L 8 4 Z"></path></svg>
     </div>
 
     <transition name="dropdown">
