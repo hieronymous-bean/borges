@@ -19,6 +19,11 @@
 </template>
 
 <script>
+async function loginProcessing() {
+  $store.dispatch('authentication/login').then(() => {
+    return this.$router.push('/');
+  });
+}
 export default {
   name: "LoginPage",
   data: () => ({
@@ -34,8 +39,8 @@ export default {
   },
   methods: {
     login() {
-      this.$store.dispatch('authentication/login').then(() => {
-        return this.$router.push('/');
+      this.$store.dispatch('authentication/login').then((res) => {
+        return res
       });
     }
   }
